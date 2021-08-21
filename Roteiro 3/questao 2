@@ -1,0 +1,57 @@
+#include <math.h>
+#include <stdio.h>
+#include <stdlib.h>
+
+typedef struct Carro{
+    char carro[30];
+	char placa[7];
+    short ano;
+	short multa;
+      D  d1;
+     
+}C;
+
+typedef struct Dono{
+	char endereco[81];
+	char nome[51];
+	char CPF[12];
+	C C1;
+}D;
+
+
+
+
+D* criaDono(char* nome, char* endereco, char* CPF){
+ 
+ 	D* res1 = (D*)malloc(sizeof(D))
+    D -> C = C1;
+	D -> C = endereco[61]; 
+    D -> C = nome[51];
+    D -> C = CPF[12];
+	
+	return(res1);
+}
+
+
+C* criaCarro(D* d1, char* placa, short ano, short multa){
+	
+  C* res = (C*)malloc(sizeof(C))	
+	C-> D = d1 ;
+	C-> D = carro;
+	C-> D = *placa;
+	C-> D = ano;
+	C-> D = multa;
+	
+	return(res);
+}
+
+int main(int argc, char** argv)
+	{
+   // int endereco,nome,CPF;
+ //   float(int *) res1 = criaDono(nome,endereco,CPF);
+		
+		
+		
+		
+		return 0;
+	}
