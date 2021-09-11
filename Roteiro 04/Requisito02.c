@@ -4,19 +4,19 @@
 
 int  main () {
 
-    FILE *arquivo = fopen ( "agenda.dat" , "r" );
+    FILE *arquivo = fopen ("agenda.dat","r" );
 	
-     if (arquivo == NULL ) {
+     if (arquivo == NULL) {
 	
-	puts ( " Arquivo não pode ser aberto " );
+	puts ( "Arquivo não pode ser aberto " );
 	exit ( 1 );
     }
    char nome[80];
-   int telefone;
+   long long int telefone;
 do{
-		fscanf("%s %i", nome,&telefone);
-    printf("\nNome: %s\n",nome);
-    printf("\nProfissao: %i\n",telefone);
+		fscanf(arquivo,"%s %lld ", nome, &telefone);
+    printf("Nome: %s\n",nome);
+    printf("Telefone: %lld\n",telefone);
  }while(!feof(arquivo));
   
 	fclose(arquivo);
